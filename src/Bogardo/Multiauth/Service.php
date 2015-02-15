@@ -79,15 +79,17 @@ class Service
     {
         if (isset($credentials[ $this->identifierKey ])) {
             $identifier = $credentials[ $this->identifierKey ];
-        } elseif (isset($credentials['email'])) {
+        }
+        elseif (isset($credentials['email'])) {
             $identifier = $credentials['email'];
-        } else {
+        }
+        else {
             throw new \Exception("Invalid user identifier");
         }
 
         $user = $this->queryUsersByIdentifier($identifier)->first();
 
-        if (!$user) {
+        if ( ! $user) {
             return null;
         }
 
@@ -108,12 +110,12 @@ class Service
         $first = $this->getEntities()->first();
 
         $query = $this->database->table($first->table)
-                                ->selectRaw($this->database->raw("'{$first->type}' AS `type`, `id`, `{$first->identifier}` AS `identifier`"))
+                                ->selectRaw($this->database->raw("'{$first->type}' AS type, id, `{$first->identifier}` AS identifier"))
                                 ->where($first->identifier, '=', $identifier);
 
         foreach ($this->getEntities()->slice(1) as $entity) {
             $subQuery = $this->database->table($entity->table)
-                                       ->selectRaw($this->database->raw("'{$entity->type}' AS `type`, `id`, `{$entity->identifier}` AS `identifier`"))
+                                       ->selectRaw($this->database->raw("'{$entity->type}' AS type, id, `{$entity->identifier}` AS identifier"))
                                        ->where($entity->identifier, '=', $identifier);
 
             $query = $query->union($subQuery);
