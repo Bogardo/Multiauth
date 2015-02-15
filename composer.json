@@ -1,0 +1,26 @@
+{
+    "name": "bogardo/multiauth",
+    "description": "Laravel Auth driver with support for multiple Eloquent models",
+    "keywords": [
+        "laravel",
+        "auth",
+        "multi"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bogardo",
+            "email": "chrisbogaards@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bogardo\\Multiauth\\": "src/Bogardo/Multiauth"
+        }
+    },
+    "minimum-stability": "stable"
+}
