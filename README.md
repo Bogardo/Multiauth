@@ -8,7 +8,7 @@ Laravel authentication driver which enables you to use multiple Eloquent models 
 
 ## Installation
 
-> Currently only compatible with Laravel 4.2
+> Currently only compatible with Laravel 4.2 <br />
 > Support for Laravel 5 is on the roadmap
 
 #### Install the package with composer
@@ -60,8 +60,8 @@ Add your multiauth settings
 
 ### Prepare your models
 
-There are 2 things that must be changed in your models
-1. Add the `Bogardo\Multiauth\User\UserTrait` (replace it if it is already present)
+There are 2 things that must be changed in your models<br />
+1. Add the `Bogardo\Multiauth\User\UserTrait` (replace it if it is already present)<br />
 2. Add a public `$authtype` property. The value of the property should match the `type` key defined in the `multiauth` configuration.
 
 #### Examples
@@ -247,3 +247,16 @@ Auth::onceUsingId('user.54')
 ```
 
 ---
+
+## Changelog
+
+#### v0.1.0
+- Multiauth implementation
+- Updated docs (formatting)
+
+#### v0.0.1
+- Initial setup with just documentation
+
+## Todo
+- Tests
+- Support for Laravel 5
