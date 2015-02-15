@@ -3,6 +3,7 @@
 use Bogardo\Multiauth\Entity\Entity;
 use Bogardo\Multiauth\Entity\EntityCollection;
 use Illuminate\Auth\UserInterface;
+use Illuminate\Config\Repository as Config;
 use Illuminate\Database\DatabaseManager;
 
 /**
@@ -32,17 +33,18 @@ class Service
 
 
     /**
-     * @param array           $config
+     * @param Config          $config
      * @param DatabaseManager $database
      */
-    public function __construct(array $config, DatabaseManager $database)
+    public function __construct(Config $config, DatabaseManager $database)
     {
         $this->database = $database;
 
         $this->entities = new EntityCollection();
-        $this->entities->setConfig($config['entities']);
+        $this->entities->setConfig($config->get('auth.multiauth.entities'));
 
-        $this->identifierKey = $config['identifier_key'];
+        $this->identifierKey = $config->get('auth.multiauth.identifier_key');
+
     }
 
     /**

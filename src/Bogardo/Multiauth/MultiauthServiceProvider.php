@@ -47,7 +47,7 @@ class MultiauthServiceProvider extends ServiceProvider {
 	public function register()
 	{
         $this->app->bindShared('multiauth.service', function () {
-            return new Service($this->app['config']->get('auth.multiauth'), $this->app['db']);
+            return new Service($this->app['config'], $this->app['db']);
         });
 	}
 
