@@ -76,24 +76,7 @@ class MultiauthServiceProvider extends ServiceProvider {
      */
     protected function registerValidationRule()
     {
-        $this->app['validator']->extend('multiAuthUnique', function ($attribute, $value, $parameters) {
-
-            $user = $this->service->queryUsersByIdentifier($value)->first();
-
-            if ($user === null) {
-                return true;
-            }
-
-            if ( ! empty($parameters) && count($parameters) == 2) {
-                list($type, $id) = $parameters;
-
-                if ($user->type == $type && $user->id == $id) {
-                    return true;
-                }
-            }
-
-            return false;
-        });
+        $this->app['validator']->extend('multiAuthUnique', 'Bogardo\Multiauth\Validator@validate');
     }
 
 }
