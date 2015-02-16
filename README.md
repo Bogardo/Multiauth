@@ -1,5 +1,10 @@
 # Bogardo\Multiauth
 
+[![Latest Stable Version](https://img.shields.io/github/release/Bogardo/Multiauth.svg?style=flat)](https://packagist.org/packages/bogardo/multiauth)
+[![MIT License](https://img.shields.io/packagist/l/Bogardo/Multiauth.svg?style=flat)](https://packagist.org/packages/bogardo/multiauth)
+[![Build Status](https://travis-ci.org/Bogardo/Multiauth.svg?branch=master)](https://travis-ci.org/Bogardo/Multiauth)
+[![Coverage Status](https://coveralls.io/repos/Bogardo/Multiauth/badge.svg)](https://coveralls.io/r/Bogardo/Multiauth)
+
 > This is a work in progress and should probably not be used in production yet.
 
 Laravel authentication driver which enables you to use multiple Eloquent models for authentication.

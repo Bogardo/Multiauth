@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",
-        "orchestra/testbench": "2.2.*"
+        "orchestra/testbench": "2.2.*",
+        "satooshi/php-coveralls": "dev-master"
     },
     "autoload": {
         "psr-4": {
