@@ -4,8 +4,8 @@
 [![MIT License](https://img.shields.io/packagist/l/Bogardo/Multiauth.svg?style=flat)](https://packagist.org/packages/bogardo/multiauth)
 [![Build Status](https://travis-ci.org/Bogardo/Multiauth.svg?branch=master)](https://travis-ci.org/Bogardo/Multiauth)
 [![Coverage Status](https://coveralls.io/repos/Bogardo/Multiauth/badge.svg)](https://coveralls.io/r/Bogardo/Multiauth)
-
-> This is a work in progress and should probably not be used in production yet.
+[![Packagist Downloads Total](https://img.shields.io/packagist/dt/bogardo/multiauth.svg?style=flat)](https://packagist.org/packages/bogardo/multiauth)
+[![Packagist Downloads Month](https://img.shields.io/packagist/dm/bogardo/multiauth.svg)](https://packagist.org/packages/bogardo/multiauth)
 
 Laravel authentication driver which enables you to use multiple Eloquent models for authentication.
 
@@ -255,6 +255,12 @@ Auth::onceUsingId('user.54')
 
 ## Changelog
 
+#### v0.2.0
+- Added Unit Tests
+- Moved Validator to it's own class
+- Added Badges
+- Added [Coverall](https://coveralls.io/r/Bogardo/Multiauth)
+
 #### v0.1.0
 - Multiauth implementation
 - Updated docs (formatting)
@@ -263,5 +269,4 @@ Auth::onceUsingId('user.54')
 - Initial setup with just documentation
 
 ## Todo
-- Tests
-- Support for Laravel 5
+- Add support for Laravel 5
